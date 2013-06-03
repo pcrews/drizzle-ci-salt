@@ -5,7 +5,7 @@ base:
     - users
 
 stage:
-  *skunkworks*:
+  '*skunkworks*':
     - jenkins
     - salt-master
 

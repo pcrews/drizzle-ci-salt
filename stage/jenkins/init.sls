@@ -10,12 +10,12 @@ add_jenkins_2:
     - name:  sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
     - order: 2 
 
-update_apt:
+update_apt_jenkins:
   cmd.run:
     - name:  apt-get update
     - order: 3 
 
-required_packages:
+required_jenkins_packages:
   pkg.installed:
     - pkgs:
       - jenkins

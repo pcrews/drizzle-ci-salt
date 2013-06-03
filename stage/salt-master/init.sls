@@ -22,4 +22,15 @@ required_packages:
       - salt-minion
       - salt-cloud
     - order: 1
- 
+
+
+/etc/salt/master:
+  file:
+    - managed
+    - source:  salt://salt-master/master
+
+/etc/salt/minion:
+  file:
+    - managed
+    - source: salt://salt-master/minion
+

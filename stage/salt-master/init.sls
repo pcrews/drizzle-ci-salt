@@ -23,7 +23,7 @@ required_salt_master_packages:
 
 salt:
   pkg:
-    - latest
+    - installed 
   service.running:
     - require:
       - file: /etc/salt/minion
@@ -55,4 +55,10 @@ salt:
     - require:
       - pkg: salt
 
-
+/etc/salt/cloud:
+  file:
+    - managed
+    - source: salt://salt-master/cloud
+    - user: root
+    - group: root
+    - mode: 644

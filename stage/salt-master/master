@@ -323,7 +323,7 @@ file_roots:
 
 pillar_roots:
   base:
-    - /srv/pillar
+    - /srv/drizzle-ci-pillar
 
 # ext_pillar:
 #   - hiera: /etc/hiera.yaml
